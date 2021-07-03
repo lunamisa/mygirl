@@ -14,7 +14,7 @@ $(function() {
 });
 
 function A1() {
-    modal('2021.5.21是我们初次见面的日子，美是初见,heiqunrousifanbuxie', B1);
+    modal('2021.5.21是我们初次见面的日子，美是初见', B1);
 }
 
 function B1() {
