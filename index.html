@@ -1,51 +1,72 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>代码烟花秀</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <style>
-        html,
-        * {
-            margin: 0;
-            padding: 0
-        }
-
-        body {
-            background-image: url(bg.png);
-            background-size: 100% 100%;
-            background-size: 100%; 
-            background-repeat:no-repeat;
-        }
-
-        .demo {
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-        }
-
-        h1 {
-            margin: 150px auto 30px auto;
-            text-align: center;
-            font-family: 'Roboto';
+        body{margin:0;padding:0;overflow: hidden;} .city{width:100%;position:fixed;bottom:
+                0px;z-index: 100;} .city img{width: 100%;}
+        audio{
+            opacity: 0;
         }
     </style>
+    <title>
+        表白我家泡泡
+    </title>
+    <link href="modal.css" rel="stylesheet"/>
 </head>
+<body onselectstart="return false" onLoad="showlove()">
+<!--对话部分-->
+<div class="share_img"><img src="a8b.png" alt=""></div>
 
-<body>
-    <div class="demo">
+<div class="page_one">
+    <div class="content">
+        <div class="text_wrapper">
+            <img src="a8.png" alt="">
+            <div class="text">
+                小姐姐，我好喜欢你，我想让你做我女朋友！
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="fireworks.js"></script>
-    <script>
-        $('.demo').fireworks({
-            sound: true,
-            opacity: 0.6,
-            width: '100%',
-            height: '100%'
-        });
-    </script>
+    <div class="btn-groups">
+        <div class="heart-btn">
+            <div id="yes" class="btn btn-a"><span>愿意</span></div>
+        </div>
+        <div id="no" class="btn btn-b"><span>不愿意</span></div>
+    </div>
+</div>
+<div id="txt" ></div>
+<!--烟花部分-->
+<canvas id='cas' style="background-color:rgba(0,5,24,1)">
+    浏览器不支持canvas
+</canvas>
+<div class="city">
+    <img src="city.png" alt="" />
+</div>
+<img src="moon.png" alt="" id="moon" style="visibility: hidden;" />
+<div style="display:none">
+    <div class="shape">
+        5.21
+    </div>
+    <div class="shape">
+        茫茫人海
+    </div>
+    <div class="shape">
+        相遇是缘
+    </div>
+</div>
 
+<!--音乐部分-->
+<audio autoplay loop id="music">
+    <source src="music.mp3" />
+</audio>
+<iframe  id="iframMusic" allow="autoplay" style="display:none" src="blank.mp3"></iframe>
+<script src="jquery.min.js"></script>
+<script src="fire.js"></script>
+<script src="talk.js"></script>
+<script src="lovetext.js"></script>
 </body>
+
+    
+    
 
 </html>
